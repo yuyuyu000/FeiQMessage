@@ -11,8 +11,8 @@ public class FeiQMessage {
 
 	public static void main(String[] args) throws Exception {
 
-		// sendMessage(getMyIpAddress() , "hello,world!" ); //给自己发个消息试试
-		sendMessage("192.168.54.2", "hello,world!");
+	 sendMessage(getMyIpAddress() , "hello,world!" ); //给自己发个消息试试
+		// sendMessage("192.168.54.2", "hello,world!");
 
 //		killFeiQ("192.168.54.2", "hello,world!");
 	}
