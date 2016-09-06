@@ -1,4 +1,4 @@
-package com.yu;
+ï»¿package com.yu;
 
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
@@ -6,25 +6,26 @@ import java.net.InetAddress;
 import java.net.UnknownHostException;
 
 public class FeiQMessage {
-	private static String packet = "1_lbt4_10#32899#002481627512#0#0#0:1289671407:ÊÀ½çÍø¹Ü:666666-666666:288:";
+		// é£é¸½æŠ¥æ–‡
+	private static String packet = "1_lbt4_10#32899#002481627512#0#0#0:1289671407:ä¸–ç•Œç½‘ç®¡:666666-666666:288:";
 
 	public static void main(String[] args) throws Exception {
 
-		// sendMessage(getMyIpAddress() , "hello,world!" ); //¸ø×Ô¼º·¢¸öÏûÏ¢ÊÔÊÔ
+		// sendMessage(getMyIpAddress() , "hello,world!" ); //ç»™è‡ªå·±å‘ä¸ªæ¶ˆæ¯è¯•è¯•
 		sendMessage("192.168.54.2", "hello,world!");
-		
+
 //		killFeiQ("192.168.54.2", "hello,world!");
 	}
 
 	/**
-	 * 
+	 *
 	 * @param ipAddress
-	 *            Ä¿±êipµØÖ·
+	 *            ç›®æ ‡ipåœ°å€
 	 * @param message
-	 *            ¸øÄ¿±êip·¢ËÍµÄÏûÏ¢
+	 *            ç»™ç›®æ ‡ipå‘é€çš„æ¶ˆæ¯
 	 */
 	public static void sendMessage(String ipAddress, String message) {
-		// ·É¸ë±¨ÎÄ
+
 
 		String msg = packet + message;
 
@@ -45,15 +46,15 @@ public class FeiQMessage {
 	}
 
 	/**
-	 * »ñÈ¡±¾»úipµØÖ·
-	 * 
-	 * @return ·µ»Ø»ñÈ¡µÄip
+	 * è·å–æœ¬æœºipåœ°å€
+	 *
+	 * @return è¿”å›è·å–çš„ip
 	 */
 	public static String getMyIpAddress() {
 		try {
 			InetAddress addr = InetAddress.getLocalHost();
-			String ip = addr.getHostAddress().toString(); // »ñÈ¡±¾»úip
-			// System.out.println("±¾»úIP£º" + ip);
+			String ip = addr.getHostAddress().toString(); // è·å–æœ¬æœºip
+			// System.out.println("æœ¬æœºIPï¼š" + ip);
 			return ip;
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
@@ -62,8 +63,8 @@ public class FeiQMessage {
 	}
 
 	/**
-	 * ÖØ¸´·¢ËÍ´óÁ¿ÏûÏ¢,Ôì³É·ÉÇï¿¨ËÀ
-	 * 
+	 * é‡å¤å‘é€å¤§é‡æ¶ˆæ¯,é€ æˆé£ç§‹å¡æ­»
+	 *
 	 * @param ipAddress
 	 * @param message
 	 */
